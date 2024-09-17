@@ -67,37 +67,4 @@ public class SelectionSort {
             swap(smallestObject, i);
         }
     }
-
-    public static int indexOfSmallestFrom(int[] array, int startIndex) {
-
-        int placeOfSmallest = startIndex;
-        int index = startIndex;
-        while (index < array.length) {
-            if (array[index] < array[placeOfSmallest]) {
-                placeOfSmallest = index;
-            }
-            index = index + 1;
-        }
-        return placeOfSmallest;
-    }
-
- 
-
-    public static void swap(int[] array, int index1, int index2) {
-        int valueThatWasAtIndex1 = array[index1];
-        array[index1] = array[index2];
-        array[index2] = valueThatWasAtIndex1;
-    }
-
- 
-
-    public static void sort(int[] array) {
-        int index = 0;
-        while (index < array.length - 1) {
-            int smallestAt = indexOfSmallestFrom(array, index);
-            swap(array, index, smallestAt);
-            index = index + 1;
-
-        }
-    }
 }
